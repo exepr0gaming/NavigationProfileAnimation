@@ -11,6 +11,9 @@
 		84601D392A6A892600BDDB65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84601D382A6A892600BDDB65 /* ContentView.swift */; };
 		84601D3B2A6A892700BDDB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84601D3A2A6A892700BDDB65 /* Assets.xcassets */; };
 		84601D3F2A6A892700BDDB65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84601D3E2A6A892700BDDB65 /* Preview Assets.xcassets */; };
+		84601D482A6A8BD600BDDB65 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84601D472A6A8BD600BDDB65 /* Profile.swift */; };
+		84601D4B2A6A94B700BDDB65 /* MAnchorKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84601D4A2A6A94B700BDDB65 /* MAnchorKey.swift */; };
+		84601D4D2A6A979500BDDB65 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84601D4C2A6A979500BDDB65 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		84601D3A2A6A892700BDDB65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84601D3C2A6A892700BDDB65 /* NavigationProfileAnimation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NavigationProfileAnimation.entitlements; sourceTree = "<group>"; };
 		84601D3E2A6A892700BDDB65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84601D472A6A8BD600BDDB65 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		84601D4A2A6A94B700BDDB65 /* MAnchorKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAnchorKey.swift; sourceTree = "<group>"; };
+		84601D4C2A6A979500BDDB65 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 			children = (
 				84601D362A6A892600BDDB65 /* NavigationProfileAnimationApp.swift */,
 				84601D382A6A892600BDDB65 /* ContentView.swift */,
+				84601D492A6A949E00BDDB65 /* Helpers */,
+				84601D462A6A894800BDDB65 /* View */,
+				84601D452A6A894300BDDB65 /* Model */,
 				84601D3A2A6A892700BDDB65 /* Assets.xcassets */,
 				84601D3C2A6A892700BDDB65 /* NavigationProfileAnimation.entitlements */,
 				84601D3D2A6A892700BDDB65 /* Preview Content */,
@@ -67,6 +76,30 @@
 				84601D3E2A6A892700BDDB65 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84601D452A6A894300BDDB65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84601D472A6A8BD600BDDB65 /* Profile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84601D462A6A894800BDDB65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84601D4C2A6A979500BDDB65 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84601D492A6A949E00BDDB65 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84601D4A2A6A94B700BDDB65 /* MAnchorKey.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84601D4B2A6A94B700BDDB65 /* MAnchorKey.swift in Sources */,
 				84601D392A6A892600BDDB65 /* ContentView.swift in Sources */,
+				84601D482A6A8BD600BDDB65 /* Profile.swift in Sources */,
+				84601D4D2A6A979500BDDB65 /* HomeView.swift in Sources */,
 				84601D372A6A892600BDDB65 /* NavigationProfileAnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,10 +323,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.i0s-news.NavigationProfileAnimation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,10 +363,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.i0s-news.NavigationProfileAnimation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
